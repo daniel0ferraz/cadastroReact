@@ -5,13 +5,18 @@ import { Container, Typography } from '@material-ui/core';
 
 
 export default function App() {
-  return (
 
+  function aoEnviarForm(dados) {
+    console.log(dados)
+  }
+  return (
     <Container component="article" maxWidth="sm">
-      <Typography variant="h3"  align="center">Formulario de Cadastro</Typography>
-      <FormularioCadastro />
+      <Typography variant="h3" align="center">Formulario de Cadastro</Typography>
+      <FormularioCadastro aoEnviar={aoEnviarForm} />
     </Container>
 
   );
 }
+
+
 
